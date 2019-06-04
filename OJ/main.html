@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<title>RUIOJ</title>
+<script>
+function orz()
+{
+	if(typeof(Storage)!=="undefined")
+	{
+		if (localStorage.orznum)
+		{
+			localStorage.orznum=Number(localStorage.orznum)+1;
+		}
+		else
+		{
+			localStorage.woodNum=1;
+		}
+		document.getElementById("result").innerHTML=" 已经orz作者 " + localStorage.woodNum + " 次 " ;
+	}
+	else
+	{
+		document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
+	}
+}
+</head>
+
+<body>
+<h1>rui_er</h1>
+<p>welcome</p>
+</body>
+
+</html>
