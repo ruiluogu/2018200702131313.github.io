@@ -15,7 +15,14 @@
   answer:<br>
   <input type="text" name="answer">
   <br><br>
-  <input type="submit" value="Submit">
+  <button type="submit" value="Submit" onclick="javascript:givaAns()">
   <!--</form> -->
 </body>
+<script>
+  function giveAns()
+  {
+    if(answer==2) {document.write("AC");}
+    else {document.write("WA");}
+  }
+</script>
 </html>
