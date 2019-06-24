@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RUIOJ</title>
+<script src="moban1830/javascript/jquery.min.js"></script>
+<style>
+.header{
+    width:100%;
+    border:1px solid red;
+}
+.left{
+    float:left;
+    width:40%;
+    border:1px solid red;
+}
+.right{
+    float:left;
+    width:58%;
+    border:1px solid red;
+}
+.ok{
+    display:none;
+    }
+#tishi{
+    color:red;
+    }
+</style>
+</head>
+<body>
+<div class="header">header</div>
+<div class="left">
+<div class="up">
+<p>
+用户名：<input type="text" name="user" id="user"></input>
+</p>
+<p>
+密&nbsp;码：<input type="password" name="password" id="password"></input>
+</p>
+<p id="tishi"></p>
+<p style="text-align:center">
+<input type="button" name="new" id="new" value="注册"></input>
+<input type="button" name="up" id="up" value="登录"></input><input type="button" name="re" id="re" value="重置"></input>
+</p>
+</div>
+<!-- 这里是登录后显示的内容 -->
+<div class="ok">
+<p>欢迎您的登录！</p>
+<p class="name"></p>
+ 
+<input type="button" name="off" id="off" value="注销"></input>
+</div>
+</div>
+ 
+<div class="right">这里是右边的块</div>
+</body>
+<script>
+$(document).ready(function(e) {
+    $("#up").click(function(){
+        if($("#user").val()==""){
+            $("#tishi").html("用户名不能空！");
+            }else 
+        if($("#password").val()==""){
+            $("#tishi").html("密码不能空！");
+            }else 
+        if($("#user").val()=="111"&&$("#password").val()=="111"){
+            $(".up").css("display","none");
+            $(".name").html("111！");
+            $(".ok").css("display","block");
+            } else{
+                $("#tishi").html("用户名或密码不正确！");
+                }
+        });
+        $("#off").click(function(){
+            $(".up").css("display","block");
+            $(".ok").css("display","none");
+            });
+});
+ 
+</script>
+</html>
