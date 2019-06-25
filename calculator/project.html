@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="gb2312">
+<head>
+<title>计算器</title>
+</head>
+<script type="text/javascript" language="javascript">
+function add(obj)
+{
+document.getElementById("txt1").value+=obj.value;
+}
+function results()
+{
+
+var obj=document.getElementById("txt1").value;
+if(obj.indexOf("=")<0)
+document.getElementById("txt1").value+="="+eval(obj);
+}
+function clears()
+{
+document.getElementById("txt1").value="";
+}
+</script>
+<body>
+<table>
+<tr>
+<td><input type="button" onclick="add(this)" id="Button1" value="1" /></td>
+<td><input type="button" onclick="add(this)" id="Button2" value="2" /></td>
+<td><input type="button" onclick="add(this)" id="Button3" value="3" /></td>
+<td><input type="button" onclick="add(this)" id="Button13" value="+" /></td>
+</tr>
+<tr>
+<td><input type="button" onclick="add(this)" id="Button4" value="4" /></td>
+<td><input type="button" onclick="add(this)" id="Button5" value="5" /></td>
+<td><input type="button" onclick="add(this)" id="Button6" value="6" /></td>
+<td><input type="button" onclick="add(this)" id="Button14" value="-" /></td>
+</tr>
+<tr>
+<td><input type="button" onclick="add(this)" id="Button7" value="7" /></td>
+<td><input type="button" onclick="add(this)" id="Button8" value="8" /></td>
+<td><input type="button" onclick="add(this)" id="Button9" value="9" /></td>
+<td><input type="button" onclick="add(this)" id="Button15" value="*" /></td>
+</tr>
+<tr>
+<td><input type="button" onclick="clears()" id="Button11" value="c" /></td>
+<td><input type="button" onclick="add(this)" id="Button10" value="0" /></td>
+<td><input type="button" onclick="results()" id="Button12" value="=" /></td>
+<td><input type="button" onclick="add(this)" id="Button16" value="/" /></td>
+</tr>
+</table>
+<input type="text" id="txt1" />
+</body>
+</html> 
