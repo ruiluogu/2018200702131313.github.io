@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rui_er AK IOI</title>
+    <style type="text/css">
+      *{margin:0; padding:0;}
+      body,input{font-size:14px; line-height:24px; color:#333; font-family:Microsoft yahei, Song, Arial, Helvetica, Tahoma, Geneva;}
+      h1{margin-bottom:15px; height:100px; line-height:100px; text-align:center; font-size:24px; color:#fff; background:black;}
+      #content #post,#comment p{zoom:1;}
+      #content #post:after,#comment p:after{display:block; height:0; clear:both; visibility:hidden; overflow:hidden; content:'.';}
+      .transition{-webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -o-transition:all 0.5s linear; -ms-transition:all 0.5s linear; transition:all 0.5s linear;}
+      #content{margin:0 auto; width:960px; overflow:hidden;}
+      #content #post{margin-bottom:15px; padding-bottom:15px; border-bottom:1px #d4d4d4 dashed;
+               height: 556px;
+           }
+      #content #post textarea{display:block; margin-bottom:10px; padding:5px; width:948px; height:390px; border:1px #d1d1d1 solid; border-radius:5px; resize:none; outline:none;}
+      #content #post textarea:hover{border:1px #9bdf70 solid; background:#f0fbeb;}
+      #content #post #postBt,#content #post #clearBt{margin-left:5px; padding:3px; float:right;}
+      #comment{overflow:hidden;}
+      #comment p{margin-bottom:10px; padding:10px; border-radius:5px;}
+      #comment p:nth-child(odd){border:1px solid #e3e197; background:#ffd;}
+      #comment p:nth-child(even){border:1px solid #adcd3c; background:#f2fddb;}
+      /*#comment p span{display:inline; float:left;}*/
+      #comment p .right{text-align:right;}
+      #comment p .msg{width:738px;}
+      #comment p .datetime{width:200px; color:#999; text-align:right;}
+    </style>
+    <script>
+      function click(){
+        if (localStorage.orz)
+		    {
+			    localStorage.orz=Number(localStorage.orz)+1;
+		    }
+		    else
+		    {
+		    	localStorage.woodNum=1;
+		    }
+		    document.getElementById("result").innerHTML=" 他被你orz了 " + localStorage.woodNum + " 次 ";
+        if (localStorage.orz >= 100)
+        {
+          document.getElementById("result").innerHTML=" 哈哈哈AK了这么多次IOI，又被膜拜了这么多次真开心 ";
+        }
+        else if (localStorage.orz >= 70)
+        {
+          document.getElementById("result").innerHTML=" 膜拜不要停！我太巨了！ ";
+        }
+        else if (localStorage.orz >= 50)
+        {
+          document.getElementById("result").innerHTML=" 站在山顶藐视你 ";
+        }
+        else if (localStorage.orz >= 40)
+        {
+          document.getElementById("result").innerHTML=" 你的膜拜就是我AK的动力 ";
+        }
+        else if (localStorage.orz >= 30)
+        {
+          document.getElementById("result").innerHTML=" 继续膜拜，我继续AK ";
+        }
+        else if (localStorage.orz >= 25)
+        {
+          document.getElementById("result").innerHTML=" 对对对，继续膜拜 ";
+        }
+        else if (localStorage.orz >= 20)
+        {
+          document.getElementById("result").innerHTML=" 我AK了这么多次IOI，你只膜拜我这么几次？快继续！ ";
+        }
+        else if (localStorage.orz >= 15)
+        {
+          document.getElementById("result").innerHTML=" 哈哈哈我吊打你 ";
+        }
+        else if (localStorage.orz >= 10)
+        {
+          document.getElementById("result").innerHTML=" 我不是巨佬，我是大神 ";
+        }
+        else if (localStorage.orz >= 5)
+        {
+          document.getElementById("result").innerHTML=" I AK IOI ";
+        }
+        else 
+        {
+          document.getElementById("result").innerHTML=" 膜拜我有彩蛋 ";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <img src="https://cdn.luogu.org/upload/usericon/122461.png" alt="rui_er">
+    <p>rui_er AKed IOI 1000 times. </p>
+    <p><button onclick="orz()" type="orz">点我膜拜巨佬</button></p>
+  </body>
+</html>
